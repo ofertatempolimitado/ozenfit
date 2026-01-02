@@ -36,29 +36,28 @@
         Ao continuar navegando, você concorda com a nossa <b>Política de Privacidade</b>.
       </p>
       <div class="btn-container">
-        <button id="aceitar">Aceitar e Continuar</button>
+        <button id="aceitar">ACEITAR E CONTINUAR</button>
         <button class="btn-secondary" id="gerenciar">Gerenciar preferências</button>
       </div>
     </div>
   </div>
 
   <script>
-    // Função única para lidar com o clique
-    function dispararEIr() {
-      // 1. Dispara a conversão para o Google Ads
+    function enviarEventoEIr() {
+      // Dispara a conversão para o Google Ads
       gtag('event', 'conversion', {
           'send_to': 'AW-17828501621/yWVqCNPyr9sbEPWwpbVC'
       });
 
-      // 2. Aguarda 400ms para garantir o envio e redireciona
+      // Redireciona após o envio
       setTimeout(function(){
         window.location.href = "https://ev.braip.com/ref?pv=prodzxk5&af=afixjmlxed";
-      }, 400);
+      }, 500);
     }
 
-    // Atribui a função aos botões
-    document.getElementById('aceitar').onclick = dispararEIr;
-    document.getElementById('gerenciar').onclick = dispararEIr;
+    // Ativa a função ao clicar nos botões
+    document.getElementById('aceitar').onclick = enviarEventoEIr;
+    document.getElementById('gerenciar').onclick = enviarEventoEIr;
   </script>
 </body>
 </html>
