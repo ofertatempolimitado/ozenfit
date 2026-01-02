@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17828501621"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17828501621'); </script>
+  <script>
+  document.getElementById('aceitar').onclick = function () {
+    // Avisa o Google que houve um clique de conversão
+    gtag('event', 'conversion', {
+        'send_to': 'AW-XXXXXXXXX/IdentificadorDaConversao',
+    });
+
+    // Redireciona para a Braip após um pequeno delay para dar tempo do Google processar
+    setTimeout(function(){
+      window.location.href = "https://ev.braip.com/ref?pv=prodzxk5&af=afixjmlxed";
+    }, 300);
+  };
+</script>
   <meta charset="UTF-8">
   <title>Oferta Especial</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
