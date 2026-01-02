@@ -1,108 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17828501621"></script> 
-  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17828501621'); </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17828501621"></script>
   <script>
-  document.getElementById('aceitar').onclick = function () {
-    // Avisa o Google que houve um clique de conversão
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17828501621/yWVqCNPyr9sbEPWwpbVC',
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17828501621');
+  </script>
 
-    // Redireciona para a Braip após um pequeno delay para dar tempo do Google processar
-    setTimeout(function(){
-      window.location.href = "https://ev.braip.com/ref?pv=prodzxk5&af=afixjmlxed";
-    }, 300);
-  };
-</script>
   <meta charset="UTF-8">
   <title>Oferta Especial</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;         
-    }
-    #bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;       
-      z-index: 1;
-    }
-
-    /* Overlay de Cookies */
-    #cookieWall {
-      position: fixed;
-      inset: 0;                 
-      background: rgba(0, 0, 0, 0.85); /* Fundo escuro atrás do banner */
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    #cookieBox {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-      max-width: 450px;
-      width: 100%;
-    }
-
-    #cookieBox h2 {
-      font-size: 20px;
-      margin: 0 0 15px 0;
-      color: #333;
-    }
-
-    #cookieBox p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    #aceitar {
-      border: none;
-      background: #00c853; /* Verde padrão de confirmação */
-      color: #fff;
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    #aceitar:hover {
-      background: #00a444;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: none;
-      color: #888;
-      font-size: 13px;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    #bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    #cookieWall { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    #cookieBox { background: #ffffff; padding: 30px; border-radius: 12px; text-align: center; font-family: sans-serif; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); max-width: 450px; width: 100%; }
+    #cookieBox h2 { font-size: 20px; margin: 0 0 15px 0; color: #333; }
+    #cookieBox p { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 25px; }
+    .btn-container { display: flex; flex-direction: column; gap: 10px; }
+    #aceitar { border: none; background: #00c853; color: #fff; padding: 14px 20px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; text-transform: uppercase; }
+    .btn-secondary { background: transparent; border: none; color: #888; font-size: 13px; text-decoration: underline; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -116,20 +35,30 @@
         Nós utilizamos cookies para personalizar anúncios e melhorar a sua experiência no site. 
         Ao continuar navegando, você concorda com a nossa <b>Política de Privacidade</b>.
       </p>
-      
       <div class="btn-container">
         <button id="aceitar">Aceitar e Continuar</button>
-        <button class="btn-secondary" onclick="document.getElementById('aceitar').click()">Gerenciar preferências</button>
+        <button class="btn-secondary" id="gerenciar">Gerenciar preferências</button>
       </div>
     </div>
   </div>
 
   <script>
+    // Função única para lidar com o clique
+    function dispararEIr() {
+      // 1. Dispara a conversão para o Google Ads
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17828501621/yWVqCNPyr9sbEPWwpbVC'
+      });
 
-    document.getElementById('aceitar').onclick = function () {
-      window.location.href = "https://ev.braip.com/ref?pv=prodzxk5&af=afixjmlxed";
-    };
+      // 2. Aguarda 400ms para garantir o envio e redireciona
+      setTimeout(function(){
+        window.location.href = "https://ev.braip.com/ref?pv=prodzxk5&af=afixjmlxed";
+      }, 400);
+    }
+
+    // Atribui a função aos botões
+    document.getElementById('aceitar').onclick = dispararEIr;
+    document.getElementById('gerenciar').onclick = dispararEIr;
   </script>
 </body>
 </html>
-
